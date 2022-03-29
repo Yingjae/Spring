@@ -1,11 +1,14 @@
 package com.ict.controller.di;
 
+import com.ict.controller.di.classfile.Book;
+import com.ict.controller.di.classfile.Library;
 import com.ict.controller.di.classfile.Singer;
 import com.ict.controller.di.classfile.Stage;
 
 public class DiMainJavaver {
 	
 	public static void main(String[] args) {
+		/*
 		// 가수, 무대를 생성한 다음
 		Singer singer = new Singer();
 		Stage stage = new Stage(singer);
@@ -13,6 +16,15 @@ public class DiMainJavaver {
 		stage.perform();
 		// 그냥 가수가 노래하는 것도 가능한지 테스트 해주세요.
 		singer.sing();
+		*/
+		// 기존 자바에서는 Book, Library를 둘 다 생성해야 실행 가능
+		Book book = new Book();
+		// Library library = new Library(book); // 생성자 주입이 가능할때는 생성하면서 book을 Library에 넣으면 됨
+		Library library = new Library();
+		library.setBook(book); // 멤버 변수 book 채우기 (setter주입)
+		
+		library.browse();
+		book.read();
 	}
 
 }

@@ -13,7 +13,7 @@ public class Stage {
 	// @Autowired를 입력시 해당 자료형과 일치하는 부품이 공장 내에 존재하면 자동으로 결합 해줍니다.
 	// 변수 위, 생성자 위 중 하나를 고르시면 됩니다.
 	//@Autowired
-	@Inject
+	//@Inject
 	//@Qualifier("popSinger")
 	private Singer singer; // 가수 멤버 변수
 	
