@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	${won } 원을 엔화로 환전시<br/>
+	<h1>${result } 엔 입니다.</h1>
 </body>
 </html>
