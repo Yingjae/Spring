@@ -7,7 +7,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>임시 페이지</h1>
-	<p>post방식으로 /score 접근을 처리했습니다.</p>
+	<h1>임시페이지</h1>
+	<p>과목별 성적</p>
+	수학 : ${math }<br/>
+	영어 : ${eng }<br/>
+	언어 : ${lang }<br/>
+	사탐 : ${social }<br/>
+	컴퓨터 : ${com }<br/>
+	<p>총점과 평균</p>
+	총점 : ${total }<br/>
+	평균 : ${avg }
 </body>
 </html>
