@@ -8,15 +8,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-
 	<div class="container">
-		<h1 class="text text-primary">${board.bno }</h1>
+		<h1 class="text text-primary">${board.bno }번글 조회중</h1>
 		<div class="row">
 			<div class="col-md-9">
-				<input type="text" class="form-control" value="${board.title }">
+				<input type="text" class="form-control" value="제목 : ${board.title }" />
 			</div>
 			<div class="col-md-3">
-				<input type="text" class="form-control" value="${board.writer }">
+				<input type="text" class="form-control" value="글쓴이 : ${board.writer }" />
 			</div>
 		</div>
 		<textarea rows="10" class="form-control">${board.content }</textarea>
@@ -28,20 +27,22 @@
 		</div>
 		<div class="row">
 			<div class="col-md-1">
-				<a href="/boardList" class="btn btn-success">글목록</a>
-			</div>	
+				<a href="/boardList" class="btn btn-success btn-sm">글목록</a>
+			</div>
 			<div class="col-md-1">
 				<form action="/boardDelete" method="post">
-					<input type="hidden" value="${board.bno }" name="bno"/>
-					<input type="submit" value="삭제" class="btn btn-warning">
+					<input type="hidden" 
+						value="${board.bno }" name="bno" />
+					<input type="submit" value="삭제" class="btn btn-danger btn-sm">
 				</form>
 			</div>
 			<div class="col-md-1">
 				<form action="/boardUpdateForm" method="post">
-                	<input type="hidden" name="bno" value="${board.bno}" >
-                	<input type="submit" value="수정" class="btn btn-warning btn-sm">
-            	</form>
-			</div>	
+					<input type="hidden" 
+						value="${board.bno }" name="bno" />
+					<input type="submit" value="수정" class="btn btn-warning btn-sm">
+				</form>
+			</div>
 		</div>
 	</div>
 </body>
