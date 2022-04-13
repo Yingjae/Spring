@@ -32,8 +32,8 @@ public interface BoardMapper {
 						@Param("content") String content,
 						@Param("bno") long bno);
 
-	// 전체 글 개수를 얻어오는 getCountBoard를 선언합니다.
-	// 파라미터는 필요 없습니다.
+	// 전체 글 개수를 얻어오는 getPageNum를 선언합니다.
+	// 파라미터는 필요없습니다.
 	// 글 개수 => 정수 값을 조회하기 때문에 int 리턴입니다.
 	public int countPageNum();
 	
