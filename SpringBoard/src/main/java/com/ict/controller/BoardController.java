@@ -46,13 +46,14 @@ public class BoardController {
 		//}
 		// model.addAttribute("바인딩이름", 바인딩자료);
 		List<BoardVO> boardList = service.getList(cri);
+			
 		log.info("넘어온 글 관련 정보 목록 : " + boardList);
 		model.addAttribute("boardList", boardList);
 		
 		// 버튼 처리를 위해 추가로 페이지메이커 생성 및 세팅
 		PageMaker pageMaker = new PageMaker();
 		pageMaker.setCri(cri);// cri 입력
-		int countPage = service.countPageNum();// 131대신 실제로 DB내 글 개수를 받아옴
+		int countPage = service.countPageNum(cri);// 131대신 실제로 DB내 글 개수를 받아옴
 		pageMaker.setTotalBoard(countPage);// calcData()호출도 되면서 순식간에 prev, next, startPage, endPage세팅
 		model.addAttribute("pageMaker", pageMaker);
 		

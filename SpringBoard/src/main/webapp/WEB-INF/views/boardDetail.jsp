@@ -27,7 +27,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-1">
-				<a href="/boardList" class="btn btn-success btn-sm">글목록</a>
+				<a href="/boardList?pageNum=${param.pageNum}&searchType=${param.searchType }&keyword=${param.keyword}" class="btn btn-success btn-sm">글목록</a>
 			</div>
 			<div class="col-md-1">
 				<form action="/boardDelete" method="post">
