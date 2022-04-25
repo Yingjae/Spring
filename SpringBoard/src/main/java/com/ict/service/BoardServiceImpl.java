@@ -55,14 +55,5 @@ public class BoardServiceImpl implements BoardService {
 	public void update(BoardVO vo) {
 		boardMapper.update(vo);
 	}
-
-
-
-	
-	
-	
-	
-	
-	
 	
 }

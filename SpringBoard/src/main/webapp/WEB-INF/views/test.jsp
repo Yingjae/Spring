@@ -57,7 +57,7 @@
 	getAllList();
 		// 버튼(testBtn)클릭시 발동되는 이벤트
 		
-					// testBtn클릭시   // 44, 45, 46, 47, 48, 49, 50번라인 실행	
+					// testBtn클릭시
 		$("#testBtn").on("click", function(){
 			//1. #test에 넣어줄 문자를 생성합니다.
 			let strTest = "<a href='https://www.daum.net'>다음으로 이동</a>";
