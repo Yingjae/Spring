@@ -2,6 +2,8 @@ package com.ict.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
+
 import com.ict.domain.ReplyVO;
 
 public interface ReplyMapper {
@@ -16,5 +18,10 @@ public interface ReplyMapper {
 	
 	// 댓글 삭제시는 단일 댓글 하나만 삭제해야 하므로 댓글번호를 받는다.
 	public void delete(Long rno);
+	
+	// 댓글번호를 통해 글번호 유추하기
+	public Long getBno(Long rno);
+	
+	public void updateReplyCount(Long bno);
 	
 }

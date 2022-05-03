@@ -25,7 +25,7 @@
 	<script type="text/javascript">
 		let bno = 363;
 		
-	function getAllList(){	
+	function getAllList(){
 		// $.getJSON은 입력한 주소에 get방식으로 요청을 넣습니다.
 					// 주소   			  // 콜백함수 주소 요청으로 얻어온 json을 어떻게 처리할지
 		$.getJSON("/replies/all/" + bno, function(data){
@@ -47,17 +47,18 @@
 				str += "<li data-rno='" + this.rno + "' class='replyLi'>"
 					+ this.rno + ":" + this.reply
 					+ "</li>";
-			});		
+			});
 			// #replies사이에 끼워넣을수있도록 console.log()로 디버깅
-			console.log(str);			
+			console.log(str);
 			$("#replies").html(str);			
 		});
 	}
-	// 함수 호출 구문을 적어야 진짜 실행됨, 함수 선언부는 작성한다고 해서 바로 실행되지 않음
+	// 함수 호출 구문을 적어야 진짜 실행됨, 함수 선언부는 작성한다고 해서 바로 실행되지 않음.
 	getAllList();
+					
 		// 버튼(testBtn)클릭시 발동되는 이벤트
 		
-					// testBtn클릭시
+					// testBtn클릭시   // 44, 45, 46, 47, 48, 49, 50번라인 실행	
 		$("#testBtn").on("click", function(){
 			//1. #test에 넣어줄 문자를 생성합니다.
 			let strTest = "<a href='https://www.daum.net'>다음으로 이동</a>";
