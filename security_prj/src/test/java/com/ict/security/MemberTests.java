@@ -58,14 +58,14 @@ public class MemberTests {
 				
 				pstmt.setString(2, pwen.encode("pw" + i)); // userpw에 복호화 pw 입력
 				if(i < 10) {
-					pstmt.setString(1, "user" + i);
-					pstmt.setString(3, "준회원" + i);	
+					pstmt.setString(1, ("user" + i));
+					pstmt.setString(3, ("준회원" + i));	
 				} else if(i < 20) {
-					pstmt.setString(1, "user" + i);
-					pstmt.setString(3, "정회원" + i);
+					pstmt.setString(1, ("user" + i));
+					pstmt.setString(3, ("정회원" + i));
 				} else if(i < 30) {
-					pstmt.setString(1, "user" + i);
-					pstmt.setString(3, "운영자" + i);
+					pstmt.setString(1, ("user" + i));
+					pstmt.setString(3, ("운영자" + i));
 				}
 				pstmt.execute();
 			}
@@ -74,6 +74,37 @@ public class MemberTests {
 			e.printStackTrace();
 		}
 	}
+
+	@Test
+	public void testInsertAuth() {
+		try {
+			Connection con = ds.getConnection();
+			String sql = "INSERT INTO member_auth(userid, auth) VALUES(?, ?)";
+			
+			for(int i = 0; i < 30; i++) {
+				PreparedStatement pstmt = con.prepareStatement(sql);
+				
+				if(i < 10) {
+					pstmt.setString(1, "user" + i);
+					pstmt.setString(2, "ROLE_USER");
+				}
+				else if(i < 20) {
+					pstmt.setString(1, "user" + i);
+					pstmt.setString(2, "ROLE_MEMBER");
+				}
+				else if(i < 10) {
+					pstmt.setString(1, "user" + i);
+					pstmt.setString(2, "ROLE_ADMIN");
+				}
+				pstmt.execute();
+			}
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
 		
 }
 	
