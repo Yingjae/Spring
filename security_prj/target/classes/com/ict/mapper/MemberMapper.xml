@@ -9,16 +9,16 @@
 	resultMap으로 묶습니다. PRIMARY KEY를 id 태그에 넣고
 	result의 property에는 VO의 변수명, column은 DB상의 컬럼명을 넣습니다.
 	이러면 VO의 변수명과 DB상의 컬럼명이 달라도 매칭이 됩니다. -->
-		<id property="userid" column="userid" />
+		<id property="userId" column="userid" />
+		<!-- property는 VO,자바 column은 DB -->
 		<result property="userId" column="userid" />
 		<result property="userPw" column="userpw" />
 		<result property="userName" column="username" />
 		<result property="regDate" column="regdate" />
 		<result property="updateDate" column="updatedate" />
-		<collection property="authList" resultMap="authMap">
-		</collection>		
+		<collection property="authList" resultMap="authMap"></collection>		
 	</resultMap>
-	
+	<!-- 아래 resultMap에 있는 2개 이상의 자료가 authList(리스트) 형식으로 위의 resultMap에 들어갈 수 있다 -->
 	<resultMap type="com.ict.domain.AuthVO" id="authMap">
 		<result property="userId" column="userid" />
 		<result property="auth" column="auth" />
@@ -34,4 +34,19 @@
 		  	ON m.userid = a.userid
 		 WHERE m.userid = #{userid}
 	</select>
+	
+	<insert id="insertMemberTbl">
+		INSERT INTO membert_tbl(userid, userpw, username)
+			 VALUES (#{userId}, #{userPw}, #{userName})
+	</insert>
+	
+	<update id="insertMemberAuth">
+		INSERT ALL
+		<foreach collection="authList" item="item" separator=" ">
+		  INTO member_auth(userid, auth)
+		VALUES (#{item.userid}, #{item.auth})  
+		</foreach>
+		SELECT *
+		  FROM DUAL
+	</update>
 </mapper>

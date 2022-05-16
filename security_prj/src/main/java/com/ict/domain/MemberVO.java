@@ -15,5 +15,5 @@ public class MemberVO {
 	
 	private Date regDate;
 	private Date updateDate;
-	private List<AuthVO> authList;
+	private List<AuthVO> authList; // 2개 이상의 자료가 들어올 수 있다.
 }
