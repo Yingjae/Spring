@@ -63,7 +63,7 @@
 	
 	<!-- 스크립트 태그로 자바스크립트 요청 확인 -->
 	<script>
-		var bno = 363;
+		var bno = 147474;
 		
 		// 전체 댓글 가져오기
 		function getAllList(){

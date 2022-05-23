@@ -193,7 +193,8 @@
 		    <version>1.9.0</version>
 		    <scope>runtime</scope>
 		</dependency>
-
+		
+						
 		<!-- https://mvnrepository.com/artifact/org.springframework.security/spring-security-web -->
 		<dependency>
 		    <groupId>org.springframework.security</groupId>
@@ -222,6 +223,13 @@
 		    <version>5.0.7.RELEASE</version>
 		</dependency>
 				
+		<!-- https://mvnrepository.com/artifact/net.coobird/thumbnailator -->
+		<dependency>
+		    <groupId>net.coobird</groupId>
+		    <artifactId>thumbnailator</artifactId>
+		    <version>0.4.17</version>
+		</dependency>
+
 						    
 	</dependencies>
     <build>

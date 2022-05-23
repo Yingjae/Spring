@@ -21,7 +21,7 @@
 	얻어온 데이터를 이용해 #replies 내부에 댓글을 집어넣도록 해주세요. 
 	$getJSON은 test.jsp의 로직을 참고하세요.-->
 	<script type="text/javascript">
-	var bno = 363;
+	var bno = 147474;
 	
 	// onClick이 걸려있으므로, 실행 조건은 클릭시 실행
 	$("#requestBtn").on("click", function(){

@@ -23,7 +23,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<!-- 비동기 요청 부분 -->
 	<script type="text/javascript">
-		let bno = 363;
+		let bno = 147474;
 		
 	function getAllList(){
 		// $.getJSON은 입력한 주소에 get방식으로 요청을 넣습니다.
@@ -71,3 +71,7 @@
 	
 </body>
 </html>
+
+
+
+

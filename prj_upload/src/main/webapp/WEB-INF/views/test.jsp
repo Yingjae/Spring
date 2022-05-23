@@ -7,10 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-	<form action="uploadFormAction" method="post" enctype="multipart/form-data">
-		<input type="file" name="uploadFile" multiple>
-		<button>submit</button>
-	</form>
+	<h2>Ajax test</h2>
+	
+	<ul id="boards">
+	
+	</ul>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	
+	
 </body>
 </html>

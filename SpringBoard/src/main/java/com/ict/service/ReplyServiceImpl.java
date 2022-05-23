@@ -29,11 +29,11 @@ public class ReplyServiceImpl implements ReplyService {
 		return mapper.getList(bno);
 	}
 
-	@Transactional// 2개 이상의 DB 접근 구문이 사용되면 트랜잭션 적용
+	@Transactional//2개 이상의 DB접근 구문이 사용되면 트랜잭션 적용
 	@Override
 	public void addReply(ReplyVO vo) {
 		mapper.create(vo);
-		// 댓글 번호는 ReplyVO에 들어있으므로 getter를 활용
+		// 댓글번호는 ReplyVO에 들어있으므로 getter를 활용
 		boardMapper.updateReplyCount(vo.getBno(), 1);
 	}
 
@@ -50,5 +50,6 @@ public class ReplyServiceImpl implements ReplyService {
 		//DB에서 커밋 안하면 pending 상태로 계속 지연되니 주의
 		boardMapper.updateReplyCount(bno, -1);
 	}
+
 	
 }

@@ -22,7 +22,7 @@ public interface ReplyMapper {
 	// 댓글번호를 통해 글번호 유추하기
 	public Long getBno(Long rno);
 	
-	// bno번글에 달린 댓글을 전부 삭제하는 쿼리문 생성
+	// bno번글에 달린 댓글을 다 삭제하는 쿼리문 생성
 	public void deleteAllReplies(Long bno);
 	
 }
